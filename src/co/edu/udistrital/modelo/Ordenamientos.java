@@ -2,7 +2,7 @@ package co.edu.udistrital.modelo;
 
 public class Ordenamientos {
 
-    // ==== Burbuja ====
+    // Burbuja
     public static void burbujaIndices(int[] arr, int[] indices, Metrica metric) {
         int n = arr.length;
         boolean swapped;
@@ -27,7 +27,7 @@ public class Ordenamientos {
         }
     }
 
-    // ==== Inserción ====
+    // Inserción
     public static void insercionIndices(int[] arr, int[] indices, Metrica metric) {
         int n = arr.length;
         for (int i = 1; i < n; i++) {
@@ -49,7 +49,7 @@ public class Ordenamientos {
         }
     }
 
-    // ==== Selección ====
+    // Selección
     public static void seleccionIndices(int[] arr, int[] indices, Metrica metric) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
@@ -72,7 +72,7 @@ public class Ordenamientos {
         }
     }
 
-    // ==== MergeSort ====
+    // MergeSort
     public static void mergeSortIndices(int[] arr, int[] indices, Metrica metric) {
         mergeSort(arr, indices, 0, arr.length - 1, metric);
     }
@@ -133,7 +133,7 @@ public class Ordenamientos {
         }
     }
 
-    // ==== QuickSort ====
+    // QuickSort
     public static void quickSortIndices(int[] arr, int[] indices, Metrica metric) {
         quickSort(arr, indices, 0, arr.length - 1, metric);
     }

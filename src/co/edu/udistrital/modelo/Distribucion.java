@@ -10,27 +10,34 @@ public class Distribucion {
         this.random = new Random(semilla);
     }
 
-    public int[] generarUniforme(int m) {
-        int[] arr = new int[m];
-        for (int i = 0; i < m; i++) {
-            arr[i] = 1 + random.nextInt(m);
-        }
-        return arr;
+    public int generarUniforme(int m) {
+        return random.nextInt(m) + 1;
     }
 
-    public int[] generarCasiOrdenado(int m) {
-        int[] arr = new int[m];
-        for (int i = 0; i < m; i++) {
-            arr[i] = i + random.nextInt(10);
+        // Casi ordenado: valores cercanos al índice i
+    public int generarCasiOrdenado(int i, int m) {
+        int ruido = random.nextInt(3) - 1; // -1, 0 o 1
+        int valor = i + ruido;
+        if (valor < 1) {
+            valor = 1;
         }
-        return arr;
+        if (valor > m) {
+            valor = m;
+        }
+        return valor;
     }
 
-    public int[] generarInverso(int m) {
-        int[] arr = new int[m];
-        for (int i = 0; i < m; i++) {
-            arr[i] = m - i;
-        }
-        return arr;
+        // Inverso: valores decrecientes desde m hacia 1
+    public int generarInverso(int i, int m) {
+        return m - i;
     }
+
+    public int generarInverso(int i, int m, int n) {
+        int paso = m / n; // cuánto decrece cada vez
+        if (paso < 1) {
+            paso = 1;
+        }
+        return m - i * paso;
+    }
+
 }

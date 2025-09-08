@@ -20,7 +20,7 @@ public class Metrica {
         this.tiempoEjecucion = 0;
     }
 
-    // === Métodos para medir tiempo ===
+    // Métodos para medir tiempo 
     public void iniciarTiempo() {
         inicio = System.nanoTime();
     }
