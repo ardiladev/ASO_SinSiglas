@@ -8,13 +8,14 @@ public class Distribucion {
 
     public Distribucion(long semilla) {
         this.random = new Random(semilla);
+        System.out.println("valo semilla " + semilla);
     }
 
     public int generarUniforme(int m) {
         return random.nextInt(m) + 1;
     }
 
-        // Casi ordenado: valores cercanos al índice i
+    // Casi ordenado: valores cercanos al índice i
     public int generarCasiOrdenado(int i, int m) {
         int ruido = random.nextInt(3) - 1; // -1, 0 o 1
         int valor = i + ruido;

@@ -6,12 +6,12 @@ public class GeneradorDatos {
 
     private Random rand;
     private int tipoDistribucion;
-    private Distribucion distribucion; // 👈 objeto para generar distribuciones
+    private Distribucion distribucion; //Objeto para generar distribuciones 
 
     public GeneradorDatos(long semilla, int distribucionSeleccionada) {
         this.rand = new Random(semilla);
         this.tipoDistribucion = distribucionSeleccionada;
-        this.distribucion = new Distribucion(semilla); // 👈 misma semilla
+        this.distribucion = new Distribucion(semilla); // se trae la misma semilla 
     }
 
     public int generarID(int i) {
@@ -28,6 +28,7 @@ public class GeneradorDatos {
     // Genera un banco de candidatos con N registros y valores aleatorios
     public BancoCandidatos generar(int n, int m, int tipoDistribucion) {
         BancoCandidatos banco = new BancoCandidatos();
+        Distribucion distribucion = new Distribucion(rand.nextLong()); // nueva cada ejecución
 
         if (n <= 0) {
             return banco;
