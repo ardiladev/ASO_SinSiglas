@@ -9,6 +9,6 @@ public class Main {
             PanelCandidatos vista = new PanelCandidatos();
             vista.setVisible(true);
         });
-    }
+    } 
 }
 

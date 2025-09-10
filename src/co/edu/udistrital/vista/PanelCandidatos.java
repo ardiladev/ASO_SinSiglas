@@ -85,7 +85,6 @@ public class PanelCandidatos extends JFrame {
             int numeroCandidatos = Integer.parseInt(campoTextoNumeroCandidatos.getText());
             int rangoMaximo = Integer.parseInt(campoTextoRangoMaximo.getText());
             long semilla = Long.parseLong(campoTextoSemilla.getText());
-
             int distribucionSeleccionada = comboBoxDistribucion.getSelectedIndex();
             int tipoOrdenamientoSeleccionado = comboBoxOrdenamiento.getSelectedIndex();
             int atributoSeleccionado = comboBoxAtributo.getSelectedIndex();

@@ -8,7 +8,6 @@ public class Distribucion {
 
     public Distribucion(long semilla) {
         this.random = new Random(semilla);
-        System.out.println("valo semilla " + semilla);
     }
 
     public int generarUniforme(int m) {
